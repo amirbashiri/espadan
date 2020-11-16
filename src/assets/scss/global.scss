@@ -1,0 +1,120 @@
+@import "extend";
+@import "variables";
+
+.max-full {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.dir-ltr {
+  direction: ltr;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-fill {
+  flex-grow: 1;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.flex-justify-around {
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-helper {
+  padding: 15px 0;
+}
+.mar-r-5{
+  margin-right: 5px;
+}
+.full-width {
+  width: 100%;
+}
+
+.form-helper {
+  padding: 18px 0;
+}
+
+.mar-b-20 {
+  margin-bottom: 20px;
+}
+.mar-b-10 {
+  margin-bottom: 10px;
+}
+
+.grid-box-2 {
+  padding: 0 15px;
+  width: 50%;
+
+  @media (max-width: 990px){
+    width: 100%;
+  }
+}
+
+.grid-box-1 {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.mat-tooltip {
+  font-size: 12px;
+  text-align: justify;
+}

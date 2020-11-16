@@ -1,0 +1,29 @@
+<div class = "main">
+
+  <p *ngIf = "isLoading">Loading Data</p>
+  <p *ngIf = "!isLoading &&(!speakers||!speakers.length)">Nothing found</p>
+  <div class = "main-speakers" *ngIf = "!isLoading && speakers && speakers.length">
+    <mat-accordion  multi>
+      <mat-expansion-panel *ngFor = "let item of speakers" (opened) = "getSessions(item)" (mouseenter) = "getSpeakerDesc(item)">
+        <mat-expansion-panel-header [matTooltip] = "item.description" [matTooltipDisabled]="!item.description">
+          <div *ngIf = "item.data && item.data.length">
+            {{item.data[0].value}}
+          </div>
+        </mat-expansion-panel-header>
+        <div class = "app-sessions" *ngIf = "item.sessions && item.sessions.length">
+          <div class = "app-session-item" *ngFor = "let session of item.sessions">
+            <h6>{{getSessionTitle(session)}}</h6>
+            <div class="app-session-item-inner" *ngIf = "session.data && session.data.length">
+              <div class = "app-session-item-data" *ngFor = "let data of session.data">
+                <label>{{data.name}} : </label>
+                <span>{{data.value}}</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+@import "variables";
+
+%transition3 {
+  transition: .3s all ease;
+}
+
+%transition2 {
+  transition: .2s all ease;
+}
+
+%transition5 {
+  transition: .5s all ease;
+}
+
+%link {
+  cursor: pointer;
+}
+
+%fullWidth {
+  width: 100%;
+}
+
+%fullHeight {
+  height: 100%;
+}
+
+%fullSize {
+  width: 100%;
+  height: 100%;
+}
+
+%noAction {
+  pointer-events: none;
+  touch-action: none;
+  @extend %user_select
+}
+
+%disabled {
+  @extend %noAction;
+  opacity: .6;
+}
+
+%user_select {
+  -moz-user-select: none;
+  user-select: none;
+}
+
+%circle {
+  border-radius: 50%;
+}
+
+
+
+%box-shadow {
+  box-shadow: 0 0 5px transparentize(#000000, .7);
+}
+
+%box-light-shadow {
+  box-shadow:0 3px 8px 0 rgba(0,0,0,0.03);;
+}
+
+%shadow {
+  box-shadow:  1px 1px 15px 0 rgba(33, 33, 33, .4);
+}
+
+%dark-shadow {
+  box-shadow: 0 4px 8px transparentize(#000000, .5);
+}
+
+%light-shadow {
+  box-shadow: 1px 1px 15px 0 rgba(33, 33, 33, .15);
+}
+
+%clear {
+  &:after {
+    @extend %pseudo;
+    display: table;
+    clear: both;
+  }
+}
+
+
+%pseudo {
+  content: '';
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+}
